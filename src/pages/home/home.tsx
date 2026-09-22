@@ -1,3 +1,4 @@
+import { Navbar } from "@/components/navbar"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { CardPro } from "@/components/ui/card-pro"
 import { HoverLinkCon } from "@/components/ui/hover-link-con"
@@ -17,6 +18,7 @@ interface HomeProps {
 export const Home = ({ theme }: HomeProps) => {
 	return (
 		<main className="flex flex-col gap-14 pb-10 sm:gap-16 sm:pb-16">
+			<Navbar />
 			<section className="flex flex-col gap-8 sm:gap-12">
 				<Avatar className="size-24 sm:size-28">
 					<AvatarImage src="/img/logo.jpg" alt="@itssolome" />
