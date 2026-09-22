@@ -11,29 +11,19 @@ import {
 } from "@/components/ui/card"
 import { useTheme } from "@/components/theme-provider"
 
-const events = [
-	{
-		id: 1,
-		title: "Toki Pomito",
-		altImage: "toki-pomito opengraph image",
-		description: "A clean and minimal Pomodoro timer to help you stay focused.",
-		imageD: "https://tokipomito.vercel.app/opengraph-image-d.png",
-		imageL: "https://tokipomito.vercel.app/opengraph-image-l.png",
-		link: "https://tokipomito.vercel.app/",
-		tech: [{ name: "React" }, { name: "TailwindCSS" }, { name: "Vite" }],
-		status: "Deployed",
-	},
-]
+import { projects } from "@/data/projects.data.ts"
+import { Navbar } from "@/components/navbar"
 
 export const Projects = () => {
-	const isOdd = events.length % 2 !== 0
+	const isOdd = projects.length % 2 !== 0
 	const { theme } = useTheme()
 
 	return (
 		<main className="pb-10 sm:pb-16">
+			<Navbar />
 			<div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8">
-				{events.map((event, index) => {
-					const isLast = index === events.length - 1
+				{projects.map((event, index) => {
+					const isLast = index === projects.length - 1
 					const shouldCenter = isOdd && isLast
 
 					return (
