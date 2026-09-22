@@ -1,6 +1,5 @@
 import { Navbar } from "@/components/navbar"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { CardPro } from "@/components/ui/card-pro"
 import { HoverLinkCon } from "@/components/ui/hover-link-con"
 import { HoverLinkExp } from "@/components/ui/hover-link-exp"
 import { HoverLinkSer } from "@/components/ui/hover-link-ser"
@@ -21,8 +20,8 @@ export const Home = ({ theme }: HomeProps) => {
 			<Navbar />
 			<section className="flex flex-col gap-8 sm:gap-12">
 				<Avatar className="size-24 sm:size-28">
-					<AvatarImage src="/img/logo.jpg" alt="@itssolome" />
-					<AvatarFallback>itssolome</AvatarFallback>
+					<AvatarImage src="/img/logo.jpg" alt="@thedarkmrx" />
+					<AvatarFallback>thedarkmrx</AvatarFallback>
 				</Avatar>
 				<div className="flex flex-col gap-2">
 					<div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
@@ -32,7 +31,7 @@ export const Home = ({ theme }: HomeProps) => {
 									<h1 className="text-sm font-semibold">Brayan Ocampo Lopez</h1>
 								</TooltipTrigger>
 								<TooltipContent>
-									<p>itssolome</p>
+									<p>thedarkmrx</p>
 								</TooltipContent>
 							</Tooltip>
 						</TooltipProvider>
@@ -57,63 +56,6 @@ export const Home = ({ theme }: HomeProps) => {
 						aesthetics, and Linux, all of which influence my taste for
 						simplicity, detail, and well-crafted systems.
 					</p>
-				</div>
-			</section>
-
-			<section>
-				<h2 className="mb-2 font-semibold">Projects</h2>
-				<div className="grid grid-cols-1 gap-3 py-1.5 sm:grid-cols-2 sm:px-3">
-					<CardPro
-						title="Toki Pomito"
-						description="Minimal Pomodoro timer."
-						link="https://tokipomito.vercel.app/"
-						theme={theme}
-						desc="A clean and minimal Pomodoro timer to help you stay focused."
-						tech={[
-							{ name: "React" },
-							{ name: "TailwindCSS" },
-							{ name: "Vite" },
-						]}
-						image={
-							theme === "dark"
-								? "https://tokipomito.vercel.app/opengraph-image-l.png"
-								: "https://tokipomito.vercel.app/opengraph-image-d.png"
-						}
-					/>
-					<CardPro
-						title="Toki List"
-						description="Minimal todo list app."
-						link="https://tokilist.vercel.app/"
-						theme={theme}
-						desc="A minimal todo list app to help you stay organized and productive."
-						tech={[
-							{ name: "React" },
-							{ name: "TailwindCSS" },
-							{ name: "Vite" },
-						]}
-						image={
-							theme === "dark"
-								? "https://tokilist.vercel.app/opengraph-image-l.png"
-								: "https://tokilist.vercel.app/opengraph-image-d.png"
-						}
-					/>
-					<CardPro
-						title="Toki Notes"
-						description="Minimal notes app."
-						link="https://tokinotes.vercel.app/"
-						theme={theme}
-						desc="A minimal notes app to help you capture and organize your thoughts."
-						tech={[
-							{ name: "React" },
-							{ name: "TailwindCSS" },
-							{ name: "Vite" },
-						]}
-						image={
-							theme === "dark"
-								? "https://tokinotes.vercel.app/opengraph-image-l.png"
-								: "https://tokinotes.vercel.app/opengraph-image-d.png"
-						}
-					/>
 				</div>
 			</section>
 
